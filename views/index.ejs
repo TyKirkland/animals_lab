@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Our Animals</title>
+</head>
+<body>
+    <h1>All Our Animals:</h1>
+    <a href="/animals/new"><button>Create A New Animal</button></a>
+    <hr>
+    <% for(let i = 0; i < animals.length; i++) { %>
+        <p>Species: <a href="/animals/<%= animals[i]._id %>"> <%= animals[i].species %> </a> </p>
+        <p>Extinct: <%= animals[i].extinct %> </p>
+        <p>Location: <%= animals[i].location %> </p>
+        <p>Life Expectancy: <%= animals[i].lifeExpectancy %> years</p>
+        <hr>
+    <% } %> 
+</body>
+</html>
